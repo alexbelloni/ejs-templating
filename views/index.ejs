@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%- include('./head'); %>
+</head>
+<body class="container">
+
+<header>
+    Report of Users - EJS Template 
+</header>
+
+<main>
+    <div class="jumbotron">
+      <h1>Users of the Platform</h1>
+      <p>Using Embedded JavaScript templating</p>
+    </div>
+  </main>
+
+<%- include('./people', {people: people }) %>
+
+<footer>
+  <%- include('./footer'); %>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,33 @@
+<%# Show people information %>
+
+    <div class="container">
+        <div class="row justify-content-center align-items-start">
+            <% people.forEach(function(person){ %>
+
+                <div class="col-sm text-center">
+                    <div class="card profile-card-3">
+                        <div class="card-img-block">
+                            <div class="card-body pt-5">
+                                <img src=<%=person.picture.large %> alt="profile-image" class="profile" />
+                                <h5 class="card-title text-center">
+                                    <%= person.name.title %>
+                                        <%= person.name.first %>
+                                            <%= person.name.last %>
+                                </h5>
+                                <h6 class="card-title text-center">
+                                    <%= person.email %>
+                                </h6>
+                                <p class="card-text text-center">
+                                    <%- include('./location', {location: person.location}) %>
+                                </p>
+                                <div class="icon-block text-center"><a href="#"><i class="fa fa-facebook"></i></a><a
+                                        href="#"> <i class="fa fa-twitter"></i></a><a href="#"> <i
+                                            class="fa fa-google-plus"></i></a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <% }); %>
+        </div>
+    </div>
